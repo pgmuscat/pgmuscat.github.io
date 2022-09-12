@@ -14,10 +14,29 @@ html,body,div,canvas { margin: 0; padding: 0; }
   ==== LAYOUT
 ****************************************/
 
-html, body { width: 100%; height: 100%; font-family: Helvetica, Verdana, Arial, sans-serif; background-image: linear-gradient(#A20247, #FA8F3D); color: white;}
-body { }
-p { font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 48px; text-align: center; }
-a { color:white; font-size: 48px; }
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    background-image: linear-gradient(#A20247, #FA8F3D);
+    color: white;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p { font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 20px; text-align: center;}
+p.head{
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 40px !important;
+    text-align: center;
+}
+a { color:white; font-size: 20px; }
+div {
+    max-width: 700px;
+    margin: auto;
+}
+
 .template-wrap { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .template-wrap canvas { margin: 0 0 10px 0; position: relative; z-index: 9; box-shadow: 0 10px 30px rgba(0,0,0,0.4); -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 .fullscreen { float: right; position: relative; z-index: 10; }
