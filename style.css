@@ -14,10 +14,18 @@ html,body,div,canvas { margin: 0; padding: 0; }
   ==== LAYOUT
 ****************************************/
 
+/* Center website */
+.main {
+    max-width: 800px;
+    min-width:480px;
+    margin: auto;
+    padding: 40px;
+}
+
 html, body {
     width: 100%;
     height: 100%;
-    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-family: Helvetica Neue, Verdana, Arial, sans-serif;
     background-image: linear-gradient(#A20247, #FA8F3D);
     color: white;
     margin: 0;
@@ -25,22 +33,81 @@ html, body {
     background-attachment: fixed;
 }
 
-p { font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 20px; text-align: center;}
-p.head{
-    font-family: Helvetica, Verdana, Arial, sans-serif;
-    font-size: 40px !important;
-    text-align: center;
+h3{margin-bottom: -15px;
+   margin-top: 5px;
 }
+
+p {
+    font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+    p.head {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 40px !important;
+        text-align: center;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 0px !important; /* between paragraphs */
+    }
+    p.faint {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 20px;
+        text-align: left;
+        color: #FFFFFFAA;
+        margin-bottom: -10px; /* between paragraphs */
+
+    }
+    p.headfaint {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 40px !important;
+        text-align: center;
+        font-weight: 500;
+        color: #FFFFFFAA;
+        margin-bottom: 30px; /* between paragraphs */
+        margin-top: 10px;
+    }
+
 a { color:white; font-size: 20px; }
-div {
-    max-width: 700px;
-    margin: auto;
+
+div.center {align-content:center;}
+
+.row {
+    margin: 8px -16px;
+    background-color:#FFFFFF22;
+    border-radius:20px;
 }
 
-.template-wrap { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-.template-wrap canvas { margin: 0 0 10px 0; position: relative; z-index: 9; box-shadow: 0 10px 30px rgba(0,0,0,0.4); -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-.fullscreen { float: right; position: relative; z-index: 10; }
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+        padding: 8px;
+    }
 
-body.template { }
-.template .template-wrap { }
-.template .template-wrap canvas { }
+img {
+    border-radius: 20px;
+}
+
+.column {
+    float: left;
+    width: 31%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    padding: 5px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 764px) {
+    .column {
+        width: 46%;
+    }
+}
