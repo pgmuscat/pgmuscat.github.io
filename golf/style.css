@@ -1,0 +1,113 @@
+
+/****************************************
+  ==== RESETS
+****************************************/
+
+html,body,div,canvas { margin: 0; padding: 0; }
+::-moz-selection { color: #333; text-shadow: none; }
+::selection {  color: #333; text-shadow: none; }
+.clear:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clear { display: inline-table; clear: both; }
+/* Hides from IE-mac \*/ * html .clear { height: 1%; } .clear { display: block; } /* End hide from IE-mac */
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+
+/* Center website */
+.main {
+    max-width: 800px;
+    min-width:480px;
+    margin: auto;
+    padding: 40px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+    background-image: linear-gradient(#197635, #2A964A);
+    color: white;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h3{margin-bottom: -15px;
+   margin-top: 5px;
+}
+
+p {
+    font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+    p.head {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 40px !important;
+        text-align: center;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 0px !important; /* between paragraphs */
+    }
+    p.faint {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 20px;
+        text-align: left;
+        color: #FFFFFFAA;
+        margin-bottom: -10px; /* between paragraphs */
+
+    }
+    p.headfaint {
+        font-family: Helvetica Neue, Verdana, Arial, sans-serif;
+        font-size: 40px !important;
+        text-align: center;
+        font-weight: 500;
+        color: #FFFFFFAA;
+        margin-bottom: 30px; /* between paragraphs */
+        margin-top: 10px;
+    }
+
+a { color:white; font-size: 20px; }
+
+div.center {align-content:center;}
+
+.row {
+    margin: 8px -16px;
+    background-color:#FFFFFF22;
+    border-radius:20px;
+}
+
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+        padding: 8px;
+    }
+
+img {
+    border-radius: 20px;
+}
+
+.column {
+    float: left;
+    width: 31%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    padding: 5px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 764px) {
+    .column {
+        width: 46%;
+    }
+}
